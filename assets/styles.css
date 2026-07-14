@@ -607,7 +607,7 @@ main {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
   gap: 1.5rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 .media-feature,
@@ -621,9 +621,9 @@ main {
 
 .media-feature video {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: clamp(260px, 34vw, 380px);
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   background: #111820;
 }
 
@@ -650,6 +650,18 @@ main {
   grid-template-columns: 1fr;
 }
 
+.life-grid-clean .photo-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.life-grid-clean .photo-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+}
+
 .photo-card {
   margin: 0;
   background: rgba(255, 255, 255, 0.92);
@@ -657,19 +669,39 @@ main {
 
 .photo-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 230px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: linear-gradient(135deg, #eef3f7, #f8fafc);
 }
 
-.photo-card-tall img {
-  aspect-ratio: 4 / 5.4;
+.photo-card-service img {
   object-position: center top;
 }
 
+.photo-card-headshot img {
+  object-position: center 20%;
+}
+
+.photo-card-formal img {
+  object-position: center 24%;
+}
+
+.photo-card-bba img {
+  object-position: center 36%;
+}
+
+.photo-card-life img {
+  object-position: center 34%;
+}
+
+.photo-card-sunset img {
+  object-position: center 18%;
+}
+
 .photo-card figcaption {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 0.9rem 1rem 1rem;
 }
 
 .photo-card span {
@@ -689,6 +721,7 @@ main {
 .photo-card p {
   color: var(--muted);
   margin: 0.45rem 0 0;
+  font-size: 0.95rem;
 }
 
 .photo-journal {
@@ -696,15 +729,6 @@ main {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
-}
-
-.photo-journal .photo-card:nth-child(1) img,
-.photo-journal .photo-card:nth-child(4) img {
-  object-position: center top;
-}
-
-.photo-journal .photo-card:nth-child(3) img {
-  object-position: center 42%;
 }
 
 .video-card {
@@ -1357,8 +1381,19 @@ main {
     max-width: 220px;
   }
 
-  .photo-card-tall img {
-    aspect-ratio: 4 / 5;
+  .media-feature video,
+  .photo-card img,
+  .photo-card-service img {
+    height: 240px;
+  }
+
+  .life-grid-clean .photo-card {
+    grid-template-columns: 1fr;
+  }
+
+  .life-grid-clean .photo-card img {
+    height: 240px;
+    min-height: 0;
   }
 
   .academy-search,
