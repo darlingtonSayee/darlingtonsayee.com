@@ -409,6 +409,10 @@ main {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.service-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .icon-chip {
   width: 2.5rem;
   height: 2.5rem;
@@ -768,7 +772,7 @@ main {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
@@ -1249,6 +1253,7 @@ main {
   .courses-highlight,
   .pricing-grid,
   .three-up,
+  .service-grid,
   .footer-grid,
   .split-panel,
   .video-grid,
