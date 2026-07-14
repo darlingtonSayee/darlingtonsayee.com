@@ -731,6 +731,10 @@ main {
   margin-top: 1.5rem;
 }
 
+.photo-journal .photo-card img {
+  object-fit: cover;
+}
+
 .video-card {
   padding: 1.2rem;
 }
@@ -1700,6 +1704,94 @@ main {
   .trust-points,
   .button-row {
     gap: 0.75rem;
+  }
+}
+
+/* Final mobile override: keeps phone layout compact without changing desktop. */
+@media (max-width: 520px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    background: rgba(248, 251, 253, 0.96);
+  }
+
+  .hero,
+  .page-hero {
+    padding-top: 1.6rem;
+  }
+
+  .hero-grid,
+  .about-hero-grid,
+  .card-grid,
+  .experience-grid,
+  .pricing-grid,
+  .contact-grid,
+  .media-story-grid,
+  .photo-journal {
+    gap: 0.85rem;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: clamp(1.58rem, 6.2vw, 2.05rem);
+    line-height: 1.08;
+  }
+
+  .button-row {
+    margin: 1rem 0;
+  }
+
+  .profile-hero {
+    grid-template-columns: 76px 1fr;
+    min-height: 0;
+  }
+
+  .profile-hero img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .profile-hero p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .metric-strip,
+  .stat-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .mini-stat {
+    min-height: 112px;
+  }
+
+  .media-feature video {
+    height: 180px;
+  }
+
+  .life-grid-clean .photo-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+
+  .life-grid-clean .photo-card img {
+    min-height: 140px;
+  }
+
+  .photo-journal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-journal .photo-card img {
+    height: 132px;
+  }
+
+  .photo-journal .photo-card figcaption {
+    min-height: 64px;
   }
 }
 
