@@ -1359,6 +1359,25 @@ main {
   .button-row {
     flex-direction: column;
     align-items: stretch;
+    margin: 1.35rem 0;
+  }
+
+  .trust-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .trust-points li {
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.7rem 0.8rem 0.7rem 1.9rem;
+    font-size: 0.95rem;
+  }
+
+  .trust-points li::before {
+    left: 0.8rem;
   }
 
   .contact-form {
@@ -1375,6 +1394,11 @@ main {
   .stat-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .metric-strip,
+  .stat-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .profile-hero {
@@ -1495,8 +1519,13 @@ main {
 
   .hero h1,
   .page-hero h1 {
-    font-size: clamp(1.72rem, 7vw, 2.45rem);
+    font-size: clamp(1.62rem, 6.6vw, 2.2rem);
     margin: 0.5rem 0 1rem;
+  }
+
+  .lead {
+    font-size: 0.96rem;
+    line-height: 1.55;
   }
 
   .section-heading h2,
@@ -1527,7 +1556,7 @@ main {
   }
 
   .button {
-    padding: 0.9rem 1.1rem;
+    padding: 0.82rem 1rem;
     font-size: 0.9rem;
   }
 
@@ -1560,6 +1589,17 @@ main {
     line-height: 1.45;
   }
 
+  .trust-points li {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    padding: 0.62rem 0.7rem 0.62rem 1.65rem;
+  }
+
+  .trust-points li::before {
+    left: 0.65rem;
+    top: 1rem;
+  }
+
   .eyebrow,
   .tag,
   .post-meta,
@@ -1585,15 +1625,16 @@ main {
   }
 
   .mini-stat {
-    padding: 0.95rem;
+    padding: 0.85rem;
   }
 
   .mini-stat strong {
-    font-size: 1.28rem;
+    font-size: 1.08rem;
   }
 
   .mini-stat span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
   }
 
   .media-story-grid {
